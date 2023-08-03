@@ -5,8 +5,7 @@
   "scripts": {
     "build": "npm run clear && tsc -d && tsc -p tsconfig.esm.json",
     "clear": "rimraf dist/*",
-    "lint": "eslint .",
-    "lint:fix": "eslint --fix .",
+    "lint": "ts-standard --fix",
     "prepare": "npm run build",
     "prettier": "prettier src --write",
     "rebuild": "npm run clear && npm run build",
@@ -26,18 +25,11 @@
     "@types/chai": "^4.3.4",
     "@types/mocha": "^10.0.1",
     "@types/node": "^18.11.17",
-    "@typescript-eslint/eslint-plugin": "^5.46.1",
-    "@typescript-eslint/parser": "^5.46.1",
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "@typescript-eslint/parser": "^5.0.0",
     "chai": "^4.3.7",
     "cross-env": "^7.0.3",
-    "eslint": "^8.30.0",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-config-standard-with-typescript": "^24.0.0",
-    "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-n": "^15.7.0",
-    "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-prettier": "^4.2.1",
-    "eslint-plugin-promise": "^6.1.1",
+    "eslint": "^8.0.1",
     "karma": "^6.4.1",
     "karma-chai": "^0.1.0",
     "karma-chrome-launcher": "^3.1.1",
@@ -46,9 +38,9 @@
     "karma-sourcemap-loader": "^0.3.8",
     "karma-typescript": "^5.5.3",
     "mocha": "^10.2.0",
-    "prettier": "^2.8.1",
     "rimraf": "^3.0.2",
     "ts-node": "^10.9.1",
+    "ts-standard": "^12.0.2",
     "typescript": "^4.9.4"
   },
   "publishConfig": {
@@ -60,6 +52,12 @@
       "ts"
     ],
     "spec": "test/**/*.ts"
+  },
+  "ts-standard": {
+    "ignore": [
+      "dist",
+      "test"
+    ]
   },
   "keywords": [
     "dcc"
