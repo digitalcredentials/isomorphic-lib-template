@@ -19,8 +19,9 @@
   },
   "include": [
     "src/**/*",
+    "test/*.spec.ts",
     ".eslintrc.js",
     "karma.conf.js"
   ],
-  "exclude": ["node_modules", "dist", "test"]
+  "exclude": ["node_modules", "dist"]
 }

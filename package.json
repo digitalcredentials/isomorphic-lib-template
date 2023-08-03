@@ -55,8 +55,7 @@
   },
   "ts-standard": {
     "ignore": [
-      "dist",
-      "test"
+      "dist"
     ]
   },
   "keywords": [

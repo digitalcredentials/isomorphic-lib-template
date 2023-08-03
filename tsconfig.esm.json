@@ -19,6 +19,7 @@
   },
   "include": [
     "src/**/*",
+    "test",
     ".eslintrc.js",
     "karma.conf.js"
   ],
