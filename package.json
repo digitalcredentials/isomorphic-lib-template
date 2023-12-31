@@ -5,11 +5,11 @@
   "scripts": {
     "build": "npm run clear && tsc -d && tsc -p tsconfig.esm.json",
     "clear": "rimraf dist/*",
-    "lint": "ts-standard --fix",
+    "lint": "ts-standard --fix --project tsconfig.spec.json",
     "prepare": "npm run build",
     "rebuild": "npm run clear && npm run build",
     "test": "npm run lint && npm run test-node && npm run test-karma",
-    "test-karma": "karma start karma.conf.js",
+    "test-karma": "cross-env NODE_ENV=test TS_NODE_PROJECT=tsconfig.spec.json karma start karma.conf.js",
     "test-node": "cross-env NODE_ENV=test TS_NODE_PROJECT=tsconfig.spec.json TS_NODE_COMPILER_OPTIONS='{\"module\": \"commonjs\" }' mocha -r ts-node/register --project tsconfig.spec.json 'test/*.ts'"
   },
   "files": [
@@ -20,6 +20,11 @@
   "main": "dist/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/esm/index.d.ts",
+  "dependencies": {
+  },
+  "resolutions": {
+    "@typescript-eslint/typescript-estree": "^6.1.6"
+  },
   "devDependencies": {
     "@types/chai": "^4.3.5",
     "@types/mocha": "^10.0.1",
