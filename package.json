@@ -9,7 +9,7 @@
     "prepare": "npm run build",
     "prettier": "prettier src --write",
     "rebuild": "npm run clear && npm run build",
-    "test": "npm run lint && npm run test-node",
+    "test": "npm run lint && npm run test-node && npm run test-karma",
     "test-karma": "karma start karma.conf.js",
     "test-node": "cross-env NODE_ENV=test TS_NODE_PROJECT=tsconfig.spec.json TS_NODE_COMPILER_OPTIONS='{\"module\": \"commonjs\" }' mocha -r ts-node/register --project tsconfig.spec.json 'test/*.ts'"
   },
