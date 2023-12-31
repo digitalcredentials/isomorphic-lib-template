@@ -7,7 +7,6 @@
     "clear": "rimraf dist/*",
     "lint": "ts-standard --fix",
     "prepare": "npm run build",
-    "prettier": "prettier src --write",
     "rebuild": "npm run clear && npm run build",
     "test": "npm run lint && npm run test-node && npm run test-karma",
     "test-karma": "karma start karma.conf.js",
