@@ -5,13 +5,17 @@
     "lib": ["es2022", "dom"],
     "module": "es6",
     "moduleResolution": "node",
-    "outDir": "dist",
+    "outDir": "dist/esm",
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true,
     "noImplicitAny": true,
     "removeComments": false,
     "preserveConstEnums": true,
     "baseUrl": ".",
     "allowSyntheticDefaultImports": true,
     "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
     "resolveJsonModule": true
   },
   "ts-node": {
