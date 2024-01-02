@@ -11,6 +11,7 @@ module.exports = function (config) {
     ],
 
     karmaTypescriptConfig: {
+      tsconfig: './tsconfig.spec.json',
       reports: {} // Disables the code coverage report
     },
 
