@@ -57,4 +57,4 @@ If editing the Readme, please conform to the
 
 ## License
 
-[MIT License](LICENSE.md) © 2023 Digital Credentials Consortium.
+[MIT License](LICENSE.md) © 2023-2025 Digital Credentials Consortium.
